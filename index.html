@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeonFest</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+        <nav class="navbar">
+            <h1 class="logo">NeonFest</h1>
+
+            <button class="btn-menu" onclick="toggleMenu()">☰</button>
+
+            <ul class="menu" id="menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#boletos">Boletos</a></li>
+                <li><a href="#registro">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+
+        <div class="hero-texto">
+            <span class="etiqueta">Festival 2026</span>
+
+            <h2>La experiencia musical más futurista</h2>
+
+            <p>
+                Vive conciertos, arte digital, gastronomía y tecnología
+                en un solo lugar.
+            </p>
+
+            <button onclick="mostrarPromo()">
+                Ver promoción
+            </button>
+        </div>
+
+        <div class="hero-imagen">
+            <img src="portada.jpg" alt="Festival">
+        </div>
+
+    </section>
+
+    <!-- EVENTOS -->
+    <section class="seccion" id="eventos">
+
+        <h2>Experiencias</h2>
+
+        <p class="descripcion">
+            Descubre todo lo que NeonFest tiene preparado.
+        </p>
+
+        <div class="contenedor-tarjetas">
+
+            <div class="tarjeta">
+                <img src="musica.jpg" alt="Música">
+
+                <div class="tarjeta-info">
+                    <h3>Música</h3>
+
+                    <p>
+                        DJs internacionales y shows en vivo.
+                    </p>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <img src="comida.jpg" alt="Comida">
+
+                <div class="tarjeta-info">
+                    <h3>Food Zone</h3>
+
+                    <p>
+                        Gastronomía urbana y experiencias culinarias.
+                    </p>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <img src="arte.jpg" alt="Arte">
+
+                <div class="tarjeta-info">
+                    <h3>Arte Digital</h3>
+
+                    <p>
+                        Instalaciones interactivas y realidad aumentada.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- BOLETOS -->
+    <section class="seccion boletos" id="boletos">
+
+        <h2>Boletos</h2>
+
+        <div class="planes">
+
+            <div class="plan">
+                <h3>General</h3>
+
+                <div class="precio">$500</div>
+
+                <p>Acceso general al festival.</p>
+
+                <button onclick="seleccionarBoleto('General')">
+                    Seleccionar
+                </button>
+            </div>
+
+            <div class="plan destacado">
+                <h3>VIP</h3>
+
+                <div class="precio">$1200</div>
+
+                <p>Zona exclusiva y acceso prioritario.</p>
+
+                <button onclick="seleccionarBoleto('VIP')">
+                    Seleccionar
+                </button>
+            </div>
+
+            <div class="plan">
+                <h3>Ultra</h3>
+
+                <div class="precio">$2500</div>
+
+                <p>Experiencia premium completa.</p>
+
+                <button onclick="seleccionarBoleto('Ultra')">
+                    Seleccionar
+                </button>
+            </div>
+
+        </div>
+
+        <p id="boletoSeleccionado"></p>
+
+    </section>
+
+    <!-- FORMULARIO -->
+    <section class="seccion registro" id="registro">
+
+        <h2>Registro</h2>
+
+        <form class="formulario" onsubmit="enviarFormulario(event)">
+
+            <label>Nombre</label>
+            <input type="text" id="nombre" required>
+
+            <label>Correo</label>
+            <input type="email" id="correo" required>
+
+            <label>Tipo de boleto</label>
+
+            <select id="tipo">
+                <option>General</option>
+                <option>VIP</option>
+                <option>Ultra</option>
+            </select>
+
+            <button type="submit">
+                Registrarme
+            </button>
+
+        </form>
+
+        <p id="respuesta"></p>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>NeonFest 2026 | Proyecto HTML CSS JS</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+  </html>
