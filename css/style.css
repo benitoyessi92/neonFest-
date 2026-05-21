@@ -1,0 +1,252 @@
+/* CONFIGURACIÓN GENERAL */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #10002b;
+    color: white;
+}
+
+/* ENCABEZADO */
+.encabezado {
+    background: rgba(16, 0, 43, 0.95);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 30px;
+    background: linear-gradient(90deg,#ff00cc,#00f5ff,#ffe600);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #00f5ff;
+}
+
+/* BOTÓN MENÚ */
+.btn-menu {
+    display: none;
+    background: linear-gradient(135deg,#ff00cc,#00f5ff);
+    color: white;
+    border: none;
+    padding: 8px 13px;
+    border-radius: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* HERO */
+.hero {
+    max-width: 1200px;
+    margin: auto;
+    padding: 70px 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
+}
+
+.etiqueta {
+    display: inline-block;
+    background: linear-gradient(135deg,#ff00cc,#00f5ff);
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.hero-texto h2 {
+    font-size: 50px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-texto p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #e0d7ff;
+    margin-bottom: 25px;
+}
+
+.hero-imagen img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 35px;
+}
+
+/* BOTONES */
+button {
+    background: linear-gradient(135deg,#ff00cc,#00f5ff);
+    color: white;
+    border: none;
+    padding: 14px 26px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* SECCIONES */
+.seccion {
+    max-width: 1200px;
+    margin: auto;
+    padding: 65px 25px;
+}
+
+.seccion h2 {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 15px;
+    color: #00f5ff;
+}
+
+.descripcion {
+    text-align: center;
+    color: #d8cfff;
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+/* TARJETAS */
+.contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+.tarjeta {
+    background: rgba(255,255,255,0.08);
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.tarjeta-info {
+    padding: 24px;
+}
+
+/* BOLETOS */
+.boletos {
+    background: linear-gradient(135deg,#240046,#3c096c,#5a189a);
+}
+
+.planes {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+.plan {
+    background: white;
+    color: #240046;
+    padding: 35px 25px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.precio {
+    font-size: 42px;
+    font-weight: bold;
+    color: #ff00cc;
+}
+
+/* FORMULARIO */
+.formulario {
+    max-width: 650px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario input,
+.formulario select {
+    padding: 14px;
+    border-radius: 14px;
+    border: none;
+}
+
+/* FOOTER */
+footer {
+    background: #070014;
+    text-align: center;
+    padding: 25px;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .contenedor-tarjetas,
+    .planes {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* CELULAR */
+@media (max-width: 600px) {
+
+    .btn-menu {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background: #240046;
+        margin-top: 15px;
+        padding: 18px;
+        border-radius: 18px;
+    }
+
+    .menu.activo {
+        display: flex;
+    }
+
+  }
